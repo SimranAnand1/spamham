@@ -1,9 +1,3 @@
-# MONGODB_URL_KEY="mongodb+srv://simranskills:mongodbpwskills@cluster0.w8hdb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-# AWS_ACCESS_KEY_ID_ENV_KEY="AKIAZI2LHRWX72FP4SUC"
-# AWS_SECRET_ACCESS_KEY_ENV_KEY="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"
-# AWS_DEFAULT_REGION="us-east-1"
-# MONGODB_URL="mongodb+srv://simranskills:mongodbpwskills@cluster0.w8hdb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
 MONGODB_URL_KEY = "MONGO_DB_URL"
 AWS_ACCESS_KEY_ID_ENV_KEY = "AWS_ACCESS_KEY_ID_ENV_KEY"
 AWS_SECRET_ACCESS_KEY_ENV_KEY = "AWS_SECRET_ACCESS_KEY_ENV_KEY"
