@@ -95,9 +95,10 @@ class SimpleStorageService:
 
             file_objects = [file_object for file_object in bucket.objects.filter(Prefix=filename)]
 
-            func = lambda x: x[0] if len(x) == 1 else x
-
-            file_objs = func(file_objects)
+            # Always return the first matched object (or raise if none found)
+            if not file_objects:
+                raise SpamhamException("No objects found in S3 with the given prefix", sys)
+            file_objs = file_objects[0]
             logging.info("Exited the get_file_object method of S3Operations class")
 
             return file_objs

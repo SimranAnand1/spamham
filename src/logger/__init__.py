@@ -1,12 +1,12 @@
+# logger_setup.py
+
 import logging
 import os
-
-from from_root import from_root
-
 from src.constant.training_pipeline import ARTIFACT_DIR, LOG_DIR, LOG_FILE, PIPELINE_NAME
 
-logs_path = os.path.join(from_root(), PIPELINE_NAME, ARTIFACT_DIR, LOG_DIR)
-
+# Assumes this file is at root level
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+logs_path = os.path.join(CURRENT_DIR, PIPELINE_NAME, ARTIFACT_DIR, LOG_DIR)
 os.makedirs(logs_path, exist_ok=True)
 
 LOG_FILE_PATH = os.path.join(logs_path, LOG_FILE)

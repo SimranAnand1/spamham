@@ -97,7 +97,6 @@ class PredictionPipelineConfig:
     output_file_name: str = prediction_pipeline.PREDICTION_OUTPUT_FILE_NAME
 
 
-
 class PCAConfig:
     def __init__(self):
         self.n_components = 2
@@ -133,4 +132,4 @@ class Prediction_config:
     
 
 
-        return self.__dict__
+        

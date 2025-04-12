@@ -3,11 +3,11 @@ import os
 from src.constant.s3_bucket import TRAINING_BUCKET_NAME
 
 
-TARGET_COLUMN = "class"
-FEATURE_COLUMN = "message"
+TARGET_COLUMN = "Label"
+FEATURE_COLUMN = "Message"
 
 PIPELINE_NAME: str = "src"
-ARTIFACT_DIR: str = "artifact"
+ARTIFACT_DIR: str = "artifacts"
 LOG_DIR = "logs"
 LOG_FILE = "spamham.log"
 
@@ -18,7 +18,7 @@ TRAIN_FILE_NAME: str = "train.csv"
 TEST_FILE_NAME: str = "test.csv"
 VECTORIZER_OBJECT_FILE_NAME = "vectorizer.pkl"
 ENCODER_OBJECT_FILE_NAME: str = "encoder.pkl"
-MODEL_FILE_NAME = "model.pkl"
+MODEL_FILE_NAME = "best_model.pkl"
 SCHEMA_FILE_PATH = os.path.join("config", "schema.yaml")
 
 """
@@ -53,7 +53,7 @@ MODEL TRAINER related constant start with MODEL_TRAINER var name
 """
 MODEL_TRAINER_DIR_NAME: str = "model_trainer"
 MODEL_TRAINER_TRAINED_MODEL_DIR: str = "trained_model"
-MODEL_TRAINER_TRAINED_MODEL_NAME: str = "model.pkl"
+MODEL_TRAINER_TRAINED_MODEL_NAME: str = "best_model.pkl"
 MODEL_TRAINER_EXPECTED_SCORE: float = 0.6
 MODEL_TRAINER_MODEL_CONFIG_FILE_PATH: str = os.path.join("config", "model.yaml")
 """

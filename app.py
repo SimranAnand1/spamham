@@ -5,6 +5,8 @@ from fastapi.responses import Response
 from uvicorn import run as app_run
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
+from dotenv import load_dotenv
+load_dotenv()
 
 
 from src.pipeline.prediction_pipeline import PredictionPipeline
